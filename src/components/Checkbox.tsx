@@ -23,7 +23,8 @@ function Checkbox(props: CheckBoxProp) {
                 onInput={(e) => setIsDone((e.target as HTMLInputElement).checked)}
             ></input>
             <div class="item__checkbox-container">
-                <div class={`item__checkbox ${isDone() ? 'item__checkbox--is-checked' : ''}`}></div>
+                <div class={`item__checkbox item__checkbox--dash ${isDone() ? 'item__checkbox--is-checked' : ''}`}></div>
+                <div class={`item__checkbox item__checkbox--check ${isDone() ? 'item__checkbox--is-checked' : ''}`}></div>
             </div>
             <span class={`item__content-container ${isDone() ? 'item__content-container--is-checked' : ''}`}>
                 <span class={`item__content ${isDone() ? 'item__content--is-checked' : ''}`}>

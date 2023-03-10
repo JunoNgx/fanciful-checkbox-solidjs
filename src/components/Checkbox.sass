@@ -19,23 +19,24 @@ input
 
 .item__checkbox
     // background-color: red
-    // position: absolute
+    position: absolute
     // top: 0
     // left: 0
     margin: auto
 
-.item__checkbox:after 
+.item__checkbox:after
     // height: 10px
     // background-color: cyan
     width: 10px
     display: block
     margin: auto
-    content: "-"
     text-align: center
 
-.item__checkbox--is-checked:after
+.item__checkbox--dash.item__checkbox:after
+    content: "-"
+
+.item__checkbox--check.item__checkbox:after
     content: "\2714"
-    // background-color: cyan
 
 $strike-time: 100ms
 $shake-time: 200ms
