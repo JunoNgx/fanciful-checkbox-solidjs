@@ -35,14 +35,15 @@ input
 .item__checkbox--is-checked:after
     content: "c"
 
-$strike-time: 200ms
+$strike-time: 100ms
+$shake-time: 200ms
 
 .item__content-container
     // background-color: green
     position: relative
     &--is-checked
         // animation: $strike-time 1 normal shaken
-        animation: shaken ($strike-time + 50ms) ease-out 0s 1 normal
+        animation: shaken $shake-time ease-out 0s 1 forwards
 
 $leading-space: 2rem
 
@@ -55,22 +56,38 @@ $leading-space: 2rem
     position: absolute
     top: 50%
     border-bottom: 2px solid black
-    transition: none
-    left: 0
-    width: 0
+    // transition: none
+    // animation: none
+    // left: 0
+    // width: 0
 
 .item__content--is-checked.item__content:before
-    width: calc(100% - $leading-space)
-    left: $leading-space
-    transition: width $strike-time, left $strike-time
+    // width: calc(100% - $leading-space)
+    // left: $leading-space
+    // transition: width $strike-time cubic-bezier(0.35, 0, 0, 1), left $strike-time cubic-bezier(0.35, 0, 0, 1)
+    animation: pierce $strike-time ease-out 0s 1 forwards
+
+@keyframes pierce
+    0%
+        width: 0%
+        left: 0
+    80%
+        width: calc(100% - $leading-space)
+        left: $leading-space
+    100%
+        width: calc(100% - $leading-space)
+        left: $leading-space
+
 
 @keyframes shaken
     0%
-        padding-left: 0
+        margin-left: 0
 
-    80%
-        padding-left: 1rem
-    85%
-        padding-left: 1rem
+    40%
+        margin-left: 0
+    50%
+        margin-left: 1rem
+    90%
+        margin-left: 1rem
     100%
-        padding-left: 0
+        margin-left: 0
