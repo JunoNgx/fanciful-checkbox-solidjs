@@ -1,3 +1,11 @@
+## Description
+
+A fun exercise to replicate [a user interface mockup from Dribble](https://dribbble.com/shots/10629617-Simple-checklist-animation/attachments/2366981?mode=media).
+
+## Stack
+
+* SolidJS
+* SASS
 ## Usage
 
 Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
