@@ -24,7 +24,7 @@ function Checkbox(props: CheckBoxProp) {
                 checked={isDone()}
                 onInput={(e) => setIsDone((e.target as HTMLInputElement).checked)}
             ></input>
-            <div class="item__checkbox-container">
+            <div class={`item__checkbox-container ${isDone() ? 'item__checkbox-container--is-checked' : ''}`}>
                 <For each={Array.from(Array(DUST_COUNT).keys())}>
                     {(i) =>
                         <div class={`item__dust item__dust--no-${i}`}></div>
