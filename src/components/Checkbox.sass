@@ -10,6 +10,8 @@ input
 
 // Checkbox
 
+$switch-time: 150ms
+
 .item__checkbox-container
     display: inline-block
     position: relative
@@ -36,22 +38,36 @@ input
 
 .item__checkbox--dash.item__checkbox:after
     content: "-"
-    opacity: 1
+    transform: scale(1, 1)
 
 .item__checkbox--check.item__checkbox:after
     content: "\2714"
-    opacity: 0
+    transform: scale(0, 0)
 
 .item__checkbox--is-checked
     &.item__checkbox--dash.item__checkbox:after
-        opacity: 0
+        // opacity: 0
+        animation: hide-dash $switch-time ease-out 0s 1 forwards
 
     &.item__checkbox--check.item__checkbox:after
-        opacity: 1
+        // opacity: 1
+        animation: show-checkmark $switch-time ease-out $switch-time 1 forwards
+
+@keyframes hide-dash
+    0%
+        transform: scale(1, 1)
+    100%
+        transform: scale(0, 1)
+
+@keyframes show-checkmark
+    0%
+        transform: scale(0, 0)
+    100%
+        transform: scale(1, 1)
 
 // Content
 
-$strike-time: 100ms
+$strike-time: 150ms
 $shake-time: 200ms
 
 .item__content-container
