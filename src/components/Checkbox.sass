@@ -36,9 +36,18 @@ input
 
 .item__checkbox--dash.item__checkbox:after
     content: "-"
+    opacity: 1
 
 .item__checkbox--check.item__checkbox:after
     content: "\2714"
+    opacity: 0
+
+.item__checkbox--is-checked
+    &.item__checkbox--dash.item__checkbox:after
+        opacity: 0
+
+    &.item__checkbox--check.item__checkbox:after
+        opacity: 1
 
 // Content
 
