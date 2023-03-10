@@ -12,7 +12,7 @@ input
 
 // Checkbox
 
-$switch-time: 150ms
+$switch-time: 250ms
 
 .item__checkbox-container
     display: inline-block
@@ -38,7 +38,7 @@ $switch-time: 150ms
     text-align: center
 
 .item__checkbox--dash.item__checkbox:after
-    content: "-"
+    content: "\2014"
     transform: scale(1, 1)
 
 .item__checkbox--check.item__checkbox:after
@@ -95,6 +95,7 @@ $dust-distance: 15px
             $y: $dust-distance * math.cos($degree)
 
             transition: transform $dust-time ease-out, opacity $dust-time ease-out
+            transition-delay: $switch-time
             transform: scale(2, 2) translate($x, $y)
             opacity: 0
 
