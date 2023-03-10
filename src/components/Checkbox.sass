@@ -17,8 +17,8 @@ $switch-time: 150ms
     position: relative
     // margin-right: 1rem
     // background-color: indianred
-    height: 27px
-    width: 27px
+    height: 23px
+    // width: 27px
     cursor: pointer
 
 .item__checkbox
@@ -30,7 +30,7 @@ $switch-time: 150ms
 
 .item__checkbox:after
     // height: 10px
-    // background-color: cyan
+    background-color: cyan
     width: 10px
     display: block
     margin: auto
@@ -64,6 +64,17 @@ $switch-time: 150ms
         transform: scale(0, 0)
     100%
         transform: scale(1, 1)
+
+// Dust particles
+
+.item__dust
+    position: absolute
+    top: calc(50% - 2px)
+    // left: calc(50% - 2px)
+    background-color: black
+    border-radius: 50%
+    width: 5px
+    height: 5px
 
 // Content
 
