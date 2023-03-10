@@ -7,15 +7,13 @@ type CheckBoxProp = {
 }
 
 function Checkbox(props: CheckBoxProp) {
-    return <ul>
-        <li>
-            <label>
-                <input type="checkbox" checked={props.item.isDone}></input>
-                <span class="checkbox"></span>
-                {props.item.content}
-            </label>
-        </li>
-    </ul>
+    return (
+        <label class="item">
+            <input type="checkbox" checked={props.item.isDone}></input>
+            <span class="checkbox"></span>
+            {props.item.content}
+        </label>
+    )
 }
 
 export default Checkbox;

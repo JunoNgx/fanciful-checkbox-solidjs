@@ -13,12 +13,15 @@ const App: Component = () => {
 
     return (
         <section class="container">
-            <For each={itemList()}>
-                {(item, index) =>
-                    // <div>{item.content}</div>
-                    <Checkbox item={item}></Checkbox>
-                }
-            </For>
+            <ul>
+                <For each={itemList()}>
+                    {(item, index) =>
+                        <li>
+                            <Checkbox item={item}></Checkbox>
+                        </li>
+                    }
+                </For>
+            </ul>
         </section>
     );
 };
