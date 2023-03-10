@@ -6,7 +6,7 @@ import Checkbox from './components/Checkbox';
 const App: Component = () => {
 
     const [itemList, setItemList] = createSignal([
-        { content: "Chicken rice", isDone: false }, 
+        { content: "Chicken rice", isDone: true }, 
         { content: "Bah Kut Teh", isDone: false }, 
         { content: "Nasi Biryani", isDone: false }, 
     ]);
