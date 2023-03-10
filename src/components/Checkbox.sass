@@ -36,24 +36,28 @@ input
     content: "c"
 
 .item__content-container
-    background-color: green
+    // background-color: green
     position: relative
 
+$leading-space: 2rem
+
 .item__content
-    margin-left: 2rem
+    margin-left: $leading-space
     margin-right: 0.25rem
 
-.item__content--is-checked
-    // text-decoration: line-through
+$strike-time: 100ms
 
 .item__content:before
     content: ""
     position: absolute
-    left: 0
     top: 50%
     border-bottom: 2px solid black
-    transition: width 500ms
+    transition: none
+    left: 0
     width: 0
 
 .item__content--is-checked.item__content:before
-    width: 100%
+    width: calc(100% - $leading-space)
+    left: $leading-space
+    transition: width $strike-time, left $strike-time
+
