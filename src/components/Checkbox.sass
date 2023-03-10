@@ -34,3 +34,18 @@ input
 
 .item__checkbox--is-checked:after
     content: "c"
+
+.item__content--is-checked
+    // text-decoration: line-through
+
+.item__content:before
+    content: ""
+    position: absolute
+    left: 0
+    top: 50%
+    border-bottom: 2px solid black
+    transition: width 500ms
+    width: 0
+
+.item__content--is-checked.item__content:before
+    width: 100%

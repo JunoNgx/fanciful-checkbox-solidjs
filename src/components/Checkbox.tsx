@@ -25,7 +25,11 @@ function Checkbox(props: CheckBoxProp) {
             <div class="item__checkbox-container">
                 <div class={`item__checkbox ${isDone() ? 'item__checkbox--is-checked' : ''}`}></div>
             </div>
-            <span class="item__content">{props.item.content}</span>
+            <span class="item__content-container">
+                <span class={`item__content ${isDone() ? 'item__content--is-checked' : ''}`}>
+                    {props.item.content}
+                </span>
+            </span>
         </label>
     )
 }
