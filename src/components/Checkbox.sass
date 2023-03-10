@@ -1,0 +1,36 @@
+.item
+    display: block
+    border: 1px solid red
+    position: relative
+    margin: 0.5rem
+
+input
+    opacity: 0.1
+    position: absolute
+
+.item__checkbox-container
+    display: inline-block
+    position: relative
+    margin-right: 1rem
+    // background-color: indianred
+    height: 27px
+    width: 27px
+    cursor: pointer
+
+.item__checkbox
+    // position: absolute
+    // top: 0
+    // left: 0
+    margin: auto
+
+.item__checkbox:after 
+    // height: 10px
+    // background-color: cyan
+    width: 10px
+    display: block
+    margin: auto
+    content: "-"
+    text-align: center
+
+.item__checkbox--is-checked:after
+    content: "c"
