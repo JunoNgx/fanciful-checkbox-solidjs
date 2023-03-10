@@ -32,11 +32,13 @@ const App: Component = () => {
         //     </header>
         // </div>
 
-        <For each={itemList()}>
-            {(item, index) =>
-                <div>{item.content}</div>
-            }
-        </For>
+        <section class="container">
+            <For each={itemList()}>
+                {(item, index) =>
+                    <div>{item.content}</div>
+                }
+            </For>
+        </section>
     );
 };
 
