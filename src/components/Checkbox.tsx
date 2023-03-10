@@ -1,4 +1,4 @@
-import { createEffect, createSignal, For } from "solid-js";
+import { createSignal, For } from "solid-js";
 
 import Item from "../types/Item";
 
@@ -12,10 +12,6 @@ const DUST_COUNT = 6;
 
 function Checkbox(props: CheckBoxProp) {
     const [isDone, setIsDone] = createSignal(props.item.isDone)
-
-    // createEffect(()=> {
-    //     console.log(isDone())
-    // })
 
     return (
         <label class="item">
