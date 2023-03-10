@@ -35,17 +35,20 @@ input
 .item__checkbox--is-checked:after
     content: "c"
 
+$strike-time: 200ms
+
 .item__content-container
     // background-color: green
     position: relative
+    &--is-checked
+        // animation: $strike-time 1 normal shaken
+        animation: shaken ($strike-time + 50ms) ease-out 0s 1 normal
 
 $leading-space: 2rem
 
 .item__content
     margin-left: $leading-space
     margin-right: 0.25rem
-
-$strike-time: 100ms
 
 .item__content:before
     content: ""
@@ -61,3 +64,13 @@ $strike-time: 100ms
     left: $leading-space
     transition: width $strike-time, left $strike-time
 
+@keyframes shaken
+    0%
+        padding-left: 0
+
+    80%
+        padding-left: 1rem
+    85%
+        padding-left: 1rem
+    100%
+        padding-left: 0
