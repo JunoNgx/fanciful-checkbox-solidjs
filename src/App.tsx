@@ -1,9 +1,6 @@
 import type { Component } from 'solid-js';
 import { createSignal, For } from 'solid-js';
 
-import logo from './logo.svg';
-import styles from './App.smodule.css';
-
 import Checkbox from './components/Checkbox';
 
 const App: Component = () => {
@@ -35,7 +32,8 @@ const App: Component = () => {
         <section class="container">
             <For each={itemList()}>
                 {(item, index) =>
-                    <div>{item.content}</div>
+                    // <div>{item.content}</div>
+                    <Checkbox item={item}></Checkbox>
                 }
             </For>
         </section>

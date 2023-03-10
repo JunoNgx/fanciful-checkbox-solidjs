@@ -1,12 +1,20 @@
+import Item from "../types/Item";
+
 import "./Checkbox.css";
 
 type CheckBoxProp = {
-    content: string
+    item: Item
 }
 
 function Checkbox(props: CheckBoxProp) {
     return <ul>
-        <li>{props.content}</li>
+        <li>
+            <label>
+                <input type="checkbox" checked={props.item.isDone}></input>
+                <span class="checkbox"></span>
+                {props.item.content}
+            </label>
+        </li>
     </ul>
 }
 
